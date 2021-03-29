@@ -1,2 +1,4 @@
 .DS_Dtore
 target
+/.idea/
+/Design-Patterns.iml
