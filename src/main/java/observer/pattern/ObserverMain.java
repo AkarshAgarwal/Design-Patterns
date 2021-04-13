@@ -16,7 +16,7 @@ public class ObserverMain {
 
         WeatherStation weatherStation = new WeatherStation();
 
-        List<PhoneScreen> observers = new ArrayList<>();
+        List<IObserver> observers = new ArrayList<>();
 
         observers.add(new PhoneScreen());
         observers.add(new PhoneScreen());

@@ -1,8 +1,8 @@
-package strategy.pattern.behaviour.impl;
+package strategy.pattern.behaviour.quack.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import strategy.pattern.ibehaviour.IQuackBehaviour;
+import strategy.pattern.behaviour.quack.IQuackBehaviour;
 
 public class NoQuacking implements IQuackBehaviour {
 

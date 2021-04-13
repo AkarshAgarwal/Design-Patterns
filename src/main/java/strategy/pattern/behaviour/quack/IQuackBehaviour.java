@@ -1,4 +1,4 @@
-package strategy.pattern.ibehaviour;
+package strategy.pattern.behaviour.quack;
 
 public interface IQuackBehaviour {
 

@@ -1,7 +1,7 @@
 package strategy.pattern.Duck;
 
-import strategy.pattern.ibehaviour.IFlyBehaviour;
-import strategy.pattern.ibehaviour.IQuackBehaviour;
+import strategy.pattern.behaviour.flying.IFlyBehaviour;
+import strategy.pattern.behaviour.quack.IQuackBehaviour;
 
 /*
  *
