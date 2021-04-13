@@ -1,8 +1,8 @@
 package observer.pattern.observer;
 
-import java.util.Properties;
+import observer.pattern.observable.IObservablePublicProperties;
 
 public interface IObserver {
 
-    void update(Properties props);
+    void update(IObservablePublicProperties props);
 }

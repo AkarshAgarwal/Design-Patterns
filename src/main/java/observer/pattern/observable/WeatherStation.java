@@ -1,12 +1,15 @@
 package observer.pattern.observable;
 
 import observer.pattern.observer.IObserver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
-public class WeatherStation implements IObservable {
+public class WeatherStation implements IObservable, IObservablePublicProperties {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(WeatherStation.class);
 
     List<IObserver> observers;
     double temperature;
@@ -25,24 +28,19 @@ public class WeatherStation implements IObservable {
         this.observers.remove(observer);
     }
 
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
-    }
-
+    @Override
     public double getTemperature() {
         return temperature;
     }
 
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
+    }
+
     @Override
     public void notifyObservers() {
-
-        System.out.println();
-        System.out.println();
-
-        Properties props = new Properties();
-        props.setProperty("Temperature", String.valueOf(getTemperature()));
+        LOGGER.info("Notifying Observers...");
         for (IObserver observer : this.observers)
-            observer.update(props);
-
+            observer.update(this);
     }
 }
